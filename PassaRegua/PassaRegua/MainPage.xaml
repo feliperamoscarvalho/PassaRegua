@@ -6,9 +6,10 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
+    	<Label Text="Minhas Contas" 
            VerticalOptions="CenterAndExpand" />
+        <Button Text="Criar nova conta" FontAttributes="Bold" Clicked="BotaoNovo_Clicked"/>
+        <ListView x:Name="lstContas"/>
     </StackLayout>
 
 </ContentPage>
