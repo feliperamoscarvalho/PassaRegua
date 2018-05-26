@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace PassaRegua
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CadastroConta : ContentPage
+	public partial class FechaConta : ContentPage
 	{
-		public CadastroConta ()
+		public FechaConta ()
 		{
 			InitializeComponent ();
 		}

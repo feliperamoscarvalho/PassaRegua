@@ -14,10 +14,19 @@ namespace PassaRegua
 			InitializeComponent();
 		}
 
-        public void BotaoNovo_Clicked(object sender, EventArgs e)
+        public void BotaoAddPessoa_Clicked(object sender, EventArgs e)
         {
-            //Método para abrir tela de criar nova conta
-            this.Navigation.PushAsync(new CadastroConta());
+            this.Navigation.PushAsync(new CadastroPessoa());
+        }
+
+        public void BotaoAddPedido_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new CadastroPedido());
+        }
+
+        public void BotaoFecharConta_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new FechaConta());
         }
 
     }

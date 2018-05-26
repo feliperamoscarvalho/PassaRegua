@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Cadastrar Pessoa"
+             x:Class="PassaRegua.CadastroPessoa">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Nome" />
+            <Entry x:Name="txtNome" />
+
+            <Button Text="Gravar" Clicked="BotaoGravarPessoa_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

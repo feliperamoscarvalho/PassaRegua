@@ -17,20 +17,39 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)CadastroConta.xaml.cs">
-      <DependentUpon>CadastroConta.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)CadastroPedido.xaml.cs">
+      <DependentUpon>CadastroPedido.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CadastroPessoa.xaml.cs">
+      <DependentUpon>CadastroPessoa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FechaConta.xaml.cs">
+      <DependentUpon>FechaConta.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)IConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Conta.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ItemConta.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\StatusConta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Pedido.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Pessoa.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CadastroConta.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CadastroPessoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CadastroPedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FechaConta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

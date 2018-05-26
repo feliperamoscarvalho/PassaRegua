@@ -6,10 +6,13 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="Minhas Contas" 
+    	<Label Text="Passa Regua" 
            VerticalOptions="CenterAndExpand" />
-        <Button Text="Criar nova conta" FontAttributes="Bold" Clicked="BotaoNovo_Clicked"/>
         <ListView x:Name="lstContas"/>
+        <Button Text="Adicionar Pessoa" FontAttributes="Bold" Clicked="BotaoAddPessoa_Clicked"/>
+        <Button Text="Adicionar Pedido" FontAttributes="Bold" Clicked="BotaoAddPedido_Clicked"/>
+        <Button Text="Fechar Conta" FontAttributes="Bold" Clicked="BotaoFecharConta_Clicked"/>
+        
     </StackLayout>
 
 </ContentPage>

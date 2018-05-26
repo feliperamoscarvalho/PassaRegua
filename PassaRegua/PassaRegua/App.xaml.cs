@@ -11,7 +11,8 @@ namespace PassaRegua
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new NavigationPage(new PassaRegua.MainPage());
 		}
 
 		protected override void OnStart ()
