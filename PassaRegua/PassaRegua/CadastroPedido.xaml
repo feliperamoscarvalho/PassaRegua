@@ -5,9 +5,17 @@
              x:Class="PassaRegua.CadastroPedido">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Cadastrar Pedido"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Pessoa" />
+            <Picker x:Name="pkrPessoa" />
+
+            <Label Text="Produto" />
+            <Entry x:Name="txtProduto" />
+
+            <Label Text="Valor" />
+            <Entry x:Name="txtValor" Placeholder="0,00" Keyboard="Numeric" />
+
+            <Button Text="Gravar" Clicked="BotaoGravarPedido_Clicked" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 using SQLite.Net;
 using System.Linq;
+using PassaRegua.Models;
 
 namespace PassaRegua
 {
@@ -29,10 +30,42 @@ namespace PassaRegua
             _conexao = new SQLiteConnection(config.Plataforma, databasePath);
 
             //Cria as tabelas no banco de dados
-            //ADICIONAR TABELAS AQUI
-            //_conexao.CreateTable<Contato>();
+            _conexao.CreateTable<Pessoa>();
+            _conexao.CreateTable<Pedido>();
         }
 
-        //Implementar metodos de persistencia e busca nas tabelas desejadas
+        public void InsertPessoa(Pessoa pessoa)
+        {
+            _conexao.Insert(pessoa);
+        }
+
+        public List<Pessoa> ListPessoa()
+        {
+            return _conexao.Table<Pessoa>().OrderBy(p => p.Nome).ToList();
+        }
+
+        public Pessoa GetPessoaByName(string nome)
+        {
+            if (String.IsNullOrEmpty(nome))
+            {
+                return null;
+            }
+            return _conexao.Table<Pessoa>().Where(p => p.Nome == nome).FirstOrDefault();
+        }
+
+        public void InsertPedido(Pedido pedido)
+        {
+            _conexao.Insert(pedido);
+        }
+
+        public List<Pedido> ListPedido()
+        {
+            return _conexao.Table<Pedido>().OrderBy(p => p.ID).ToList();
+        }
+
+        public void DeletePedido()
+        {
+            _conexao.DeleteAll<Pedido>();
+        }
     }
 }

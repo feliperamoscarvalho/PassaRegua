@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassaRegua.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,19 @@ namespace PassaRegua
 
         public void BotaoGravarPessoa_Clicked(object sender, EventArgs e)
         {
+            Entry txtNome = this.FindByName<Entry>("txtNome");
 
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = txtNome.Text;
+
+            AcessoDados ac = new AcessoDados();
+            if(ac.GetPessoaByName(pessoa.Nome) != null)
+            {
+                //Mostra mensagem de erro
+                DisplayAlert("Alerta", "Esta pessoa ja esta cadastrada!", "OK");
+            }
+
+            ac.InsertPessoa(pessoa);
         }
     }
 }
