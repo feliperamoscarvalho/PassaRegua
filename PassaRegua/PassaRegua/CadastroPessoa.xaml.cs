@@ -31,8 +31,11 @@ namespace PassaRegua
                 //Mostra mensagem de erro
                 DisplayAlert("Alerta", "Esta pessoa ja esta cadastrada!", "OK");
             }
-
-            ac.InsertPessoa(pessoa);
+            else
+            {
+                ac.InsertPessoa(pessoa);
+                DisplayAlert("Sucesso", "Pessoa inserida com sucesso!", "OK");
+            }
         }
     }
 }

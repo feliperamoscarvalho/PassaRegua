@@ -12,7 +12,14 @@ namespace PassaRegua
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+
+            AcessoDados ac = new AcessoDados();
+
+            ListView listPedidos = this.FindByName<ListView>("lstPedidos");
+            listPedidos.ItemsSource = ac.ListPedido();
+
+
+        }
 
         public void BotaoAddPessoa_Clicked(object sender, EventArgs e)
         {

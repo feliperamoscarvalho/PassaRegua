@@ -53,6 +53,15 @@ namespace PassaRegua
             return _conexao.Table<Pessoa>().Where(p => p.Nome == nome).FirstOrDefault();
         }
 
+        public Pessoa GetPessoaById(int? Id)
+        {
+            if (!Id.HasValue)
+            {
+                return null;
+            }
+            return _conexao.Table<Pessoa>().Where(p => p.ID == Id).FirstOrDefault();
+        }
+
         public void InsertPedido(Pedido pedido)
         {
             _conexao.Insert(pedido);

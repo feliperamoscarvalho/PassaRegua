@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Pessoa" />
-            <Picker x:Name="pkrPessoa" />
+            <Picker x:Name="pkrPessoa" Title="Selecione a pessoa" SelectedIndexChanged="OnPessoa_Change" />
 
             <Label Text="Produto" />
             <Entry x:Name="txtProduto" />

@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PassaRegua"
+             Title="Passa Régua"
              x:Class="PassaRegua.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="Passa Regua" 
-           VerticalOptions="CenterAndExpand" />
-        <ListView x:Name="lstContas"/>
+    	<Label Text="Pedidos" FontSize="20"
+           VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+        <ListView x:Name="lstPedidos"/>
         <Button Text="Adicionar Pessoa" FontAttributes="Bold" Clicked="BotaoAddPessoa_Clicked"/>
         <Button Text="Adicionar Pedido" FontAttributes="Bold" Clicked="BotaoAddPedido_Clicked"/>
         <Button Text="Fechar Conta" FontAttributes="Bold" Clicked="BotaoFecharConta_Clicked"/>
