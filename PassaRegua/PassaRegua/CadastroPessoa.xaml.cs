@@ -34,6 +34,7 @@ namespace PassaRegua
             else
             {
                 ac.InsertPessoa(pessoa);
+                txtNome.Text = "";
                 DisplayAlert("Sucesso", "Pessoa inserida com sucesso!", "OK");
             }
         }

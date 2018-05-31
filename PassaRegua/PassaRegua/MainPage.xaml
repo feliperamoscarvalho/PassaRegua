@@ -9,7 +9,21 @@
         <!-- Place new controls here -->
     	<Label Text="Pedidos" FontSize="20"
            VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-        <ListView x:Name="lstPedidos"/>
+
+        <ListView x:Name="lstPedidos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell 
+                        Text="{Binding ProdutoPessoa}"
+                        Detail="{Binding Valor, StringFormat='R$ {0:F2}'}"
+                        TextColor="Gray"
+                        DetailColor="Black">
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
         <Button Text="Adicionar Pessoa" FontAttributes="Bold" Clicked="BotaoAddPessoa_Clicked"/>
         <Button Text="Adicionar Pedido" FontAttributes="Bold" Clicked="BotaoAddPedido_Clicked"/>
         <Button Text="Fechar Conta" FontAttributes="Bold" Clicked="BotaoFecharConta_Clicked"/>
