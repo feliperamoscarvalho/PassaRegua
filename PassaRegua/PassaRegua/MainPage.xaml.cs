@@ -33,7 +33,7 @@ namespace PassaRegua
 
         public void BotaoFecharConta_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new FechaConta());
+            this.Navigation.PushAsync(new FechaPedido());
         }
 
     }

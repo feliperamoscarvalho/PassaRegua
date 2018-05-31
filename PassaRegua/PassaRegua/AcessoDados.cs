@@ -76,5 +76,17 @@ namespace PassaRegua
         {
             _conexao.DeleteAll<Pedido>();
         }
+
+        public List<Pedido> ListPedidoGroupByPessoa()
+        {
+            var resultados = _conexao.Table<Pedido>().GroupBy(p => p.Pessoa)
+                .Select(group => new Pedido
+                {
+                    Pessoa = group.Key,
+                    Valor = group.Sum(v => v.Valor)
+                }
+                ).ToList();
+            return resultados;
+        }
     }
 }

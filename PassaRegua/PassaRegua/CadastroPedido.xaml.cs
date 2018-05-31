@@ -38,7 +38,7 @@ namespace PassaRegua
             if (p.SelectedIndex != -1)
             {
                 pessoaSelecionada = (Pessoa)p.ItemsSource[p.SelectedIndex];
-                pedido.IdPessoa = pessoaSelecionada.ID;
+                pedido.Pessoa = pessoaSelecionada.Nome;
             }
         }
 
@@ -51,7 +51,6 @@ namespace PassaRegua
             //Utiliza o objeto Pedido da tela
             pedido.Produto = txtProduto.Text;
             pedido.Valor = Convert.ToDecimal(txtValor.Text);
-            //pedido.Pessoa = pkrPessoa.GetValue();
 
             AcessoDados ac = new AcessoDados();
             ac.InsertPedido(pedido);

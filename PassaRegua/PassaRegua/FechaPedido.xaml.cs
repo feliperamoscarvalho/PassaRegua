@@ -10,11 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace PassaRegua
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FechaConta : ContentPage
+	public partial class FechaPedido : ContentPage
 	{
-		public FechaConta ()
+		public FechaPedido ()
 		{
 			InitializeComponent ();
-		}
+
+            AcessoDados ac = new AcessoDados();
+
+            ListView listPedidos = this.FindByName<ListView>("lstPedidos");
+            listPedidos.ItemsSource = ac.ListPedidoGroupByPessoa();
+
+        }
 	}
 }
