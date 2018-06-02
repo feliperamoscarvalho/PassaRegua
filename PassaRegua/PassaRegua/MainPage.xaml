@@ -21,13 +21,17 @@
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
-        
+
+        <Label x:Name="lblCount" Text="Total Pedidos" FontSize="10"
+           VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+        <Label x:Name="lblTotal" Text="Valor da Conta" FontSize="10"
+           VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+
         <Button Text="Adicionar Pessoa" FontAttributes="Bold" Clicked="BotaoAddPessoa_Clicked"/>
         <Button Text="Adicionar Pedido" FontAttributes="Bold" Clicked="BotaoAddPedido_Clicked"/>
         <Button Text="Fechar Conta" FontAttributes="Bold" Clicked="BotaoFecharConta_Clicked"/>
-        
+
     </StackLayout>
 
 </ContentPage>

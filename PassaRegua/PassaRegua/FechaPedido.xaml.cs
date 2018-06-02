@@ -22,5 +22,13 @@ namespace PassaRegua
             listPedidos.ItemsSource = ac.ListPedidoGroupByPessoa();
 
         }
-	}
+
+        public void BotaoFechar_Clicked(object sender, EventArgs e)
+        {
+            AcessoDados ac = new AcessoDados();
+            ac.DeletePedido();
+            DisplayAlert("Sucesso", "Conta encerrada!", "OK");
+        }
+
+    }
 }

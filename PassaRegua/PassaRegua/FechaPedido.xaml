@@ -7,8 +7,19 @@
         <StackLayout>
             <Label Text="Fechar Pedidos" FontSize="20"
            VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-            <ListView x:Name="lstPedidos"/>
-            <Button Text="Fechar"/>
+            <ListView x:Name="lstPedidos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                        Text="{Binding Pessoa}"
+                        Detail="{Binding Valor, StringFormat='R$ {0:F2}'}"
+                        TextColor="Gray"
+                        DetailColor="Black">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Fechar" FontAttributes="Bold" Clicked="BotaoFechar_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
